@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace Menu
 {
+    /// <summary>
+    /// Класс команд для меню
+    /// </summary>
     class MenuCommands
     {
         public void OpenDirectoryCity(object sender, EventArgs e)

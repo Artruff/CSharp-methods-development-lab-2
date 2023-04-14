@@ -22,13 +22,20 @@ namespace CSharp_methods_development_lab_2
             this.Close();
         }
 
+        /// <summary>
+        /// Функция входа в приложение
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void InterFunction(object sender, EventArgs e)
         {
             FileInfo f = new FileInfo("C:\\Users\\artur.ivanov.2021\\Documents\\TD\\TMP\\Lab2\\Users.txt");
             StreamReader sr = f.OpenText();
+            //Проверяем с каждым пользователем
             while(!sr.EndOfStream)
             {
                 string[] data = sr.ReadLine().Split(new char[1] { ' ' });
+                //Проверяем данные входа
                 if (userTextBox.Text != data[0] || passwordTextBox.Text != data[1])
                     continue;
                 MenuApplicationForm ap = new MenuApplicationForm(data[2]);

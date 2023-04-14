@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Menu
 {
+    /// <summary>
+    /// Уровни доступа элементов меню
+    /// </summary>
     public enum AccessEnum
     {
         VisibleAndAccessible,
